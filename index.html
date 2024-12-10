@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Pedidos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Pedidos</h1>
+    <form id="orderForm">
+      <input type="text" id="clientName" placeholder="Cliente" required>
+      <textarea id="description" placeholder="Descripción" required></textarea>
+      <input type="number" id="value" placeholder="Valor ($)" required>
+      <input type="date" id="deliveryDate" required>
+      <button type="submit">Agregar Pedido</button>
+    </form>
+
+    <div class="order-list">
+      <h2>Pedidos</h2>
+      <table id="ordersTable">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Descripción</th>
+            <th>Valor ($)</th>
+            <th>Fecha de Entrega</th>
+            <th>Pagado</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody id="orders"></tbody>
+      </table>
+    </div>
+
+    <div class="totals">
+      <p>Total Pendiente: $<span id="totalPending">0</span></p>
+      <p>Total Pagado: $<span id="totalPaid">0</span></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
